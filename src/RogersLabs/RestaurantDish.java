@@ -1,8 +1,8 @@
 package RogersLabs;
 
-public class RestuarantDish {
+public class RestaurantDish {
 
-    protected int costInDollars;
+    protected double costInDollars;
     protected  String nameOfDish;
     protected boolean wouldRecommend;
 
@@ -10,8 +10,8 @@ public class RestuarantDish {
     public void eat(){
         System.out.println("Nom nom");
     }
-//constructor
-    protected RestuarantDish(int costInDollars, String nameOfDish, boolean wouldRecommend){
+    //constructor
+    protected RestaurantDish(double costInDollars, String nameOfDish, boolean wouldRecommend){
         this.costInDollars = costInDollars;
         this.nameOfDish = nameOfDish;
         this.wouldRecommend = wouldRecommend;
@@ -20,11 +20,11 @@ public class RestuarantDish {
         return "Name: " + nameOfDish + "\nCost: $" + costInDollars + "\nWould Recommend: " + wouldRecommend;
     }
 
-    public int getCostInDollars() {
+    public double getCostInDollars() {
         return costInDollars;
     }
 
-    public void setCostInCents(int costInDollars) {
+    public void setCostInCents(double costInDollars) {
         this.costInDollars = costInDollars;
     }
 
