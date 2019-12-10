@@ -2,9 +2,9 @@ package RogersLabs;
 
 public class RestaurantDish {
 
-    protected double costInDollars;
-    protected  String nameOfDish;
-    protected boolean wouldRecommend;
+    private double costInDollars;
+    private  String nameOfDish;
+    private boolean wouldRecommend;
 
 
     public void eat(){
@@ -17,7 +17,7 @@ public class RestaurantDish {
         this.wouldRecommend = wouldRecommend;
     }
     public String toString() {
-        return "Name: " + nameOfDish + "\nCost: $" + costInDollars + "\nWould Recommend: " + wouldRecommend;
+        return "Name: " + getNameOfDish() + "\nCost: $" + getCostInDollars() + "\nWould Recommend: " + getWouldRecommend();
     }
 
     public double getCostInDollars() {
