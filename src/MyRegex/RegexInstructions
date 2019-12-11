@@ -1,0 +1,23 @@
+Write a class called MyRegex which will contain a
+string pattern. You need to write a regular
+expression and assign it to the pattern such that it
+can be used to validate an IP address. Use the
+following definition of an IP address:
+
+IP address is a string in the form "A.B.C.D", where
+the value of A, B, C, and D may range from 0 to 255.
+Leading zeros are allowed. The length of A, B, C, or
+D can't be greater than 3.
+
+In this problem you will be provided strings containing any
+combination of ASCII characters. You have to write a regular
+expression to find the valid IPs.
+
+Just write the MyRegex class which contains a String . The
+string should contain the correct regular expression.
+
+(MyRegex class MUST NOT be public)
+
+Because in regex's "." has a special meaning which says match any character.
+To match only a dot you need an escape character and make it "."
+However, for Java "\" has special meaning. So you have to escape the escape character and that makes it "\."

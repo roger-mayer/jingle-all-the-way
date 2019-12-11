@@ -4,10 +4,10 @@ package bookstore;
 // that sets those properties
 public class Product {
     //constructor
-    private String title;
-    private float price;
+    public String title;
+    public double price;
 
-    public Product(String title, float price) {
+    public Product(String title, double price) {
         this.title = title;
         this.price = price;
     }

@@ -2,7 +2,7 @@ package bookstore;
 
 //Make an Author subclass that inherits from person,
 public class Author extends Person {
-    int counter;
+    public int counter;
 
     public Author(String firstName, String lastName, int counter) {
         super(firstName, lastName);
