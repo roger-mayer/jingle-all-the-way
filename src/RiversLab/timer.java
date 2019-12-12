@@ -1,5 +1,7 @@
 package RiversLab;
 import java.util.Scanner;
+import java.time.LocalTime;
+import java.time.LocalDate;
 
 public class timer {
     public static String addZero(Integer n, Integer test){
@@ -15,28 +17,58 @@ public class timer {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        while (true) {
-            int time = 0;
-            while (true){
-                System.out.println("Enter timer:");
-                String input = sc.nextLine();
-
-                try {
-                    time = Integer.parseInt(input);
+        boolean go = true;
+        while (go) {
+            System.out.print("Menu:\n" +
+                    "0: Exit\n" +
+                    "1: Show current time\n" +
+                    "2: Show current date\n" +
+                    "3: Start a timer\n");
+            System.out.println("Enter an option:");
+            String userIn = sc.nextLine();
+            switch (userIn){
+                case "0": {
+                    go = false;
                     break;
-                } catch (Exception e){
+                }
+                case "1": {
+                    LocalTime temp = LocalTime.now();
+                    System.out.println(temp.toString().substring(0, 5));
+                    break;
+                }
+                case "2":{
+                    LocalDate temp = LocalDate.now();
+                    System.out.println(temp.toString());
+                    break;
+                }
+                case "3":{
+                    int time = 0;
+                    while (true){
+                        System.out.println("Enter amount of seconds:");
+                        String input = sc.nextLine();
+                        try {
+                            time = Integer.parseInt(input);
+                            break;
+                        } catch (Exception e){
+                            System.out.println("Invalid input");
+                        }
+                    }
+                    try {
+                        while (time > 0) {
+                            System.out.println(showTime(time));
+                            Thread.sleep(1000);
+                            time--;
+                        }
+                        System.out.println("Timer done!");
+                    } catch (Exception e) {
+                        System.out.println("Error");
+                    }
+                    break;
+                }
+                default: {
                     System.out.println("Invalid input");
+                    break;
                 }
-            }
-            try {
-                while (time > 0) {
-                    System.out.println(showTime(time));
-                    Thread.sleep(1000);
-                    time--;
-                }
-                System.out.println("Timer done!");
-            } catch (Exception e) {
-                System.out.println("Error");
             }
         }
     }
