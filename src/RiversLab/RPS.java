@@ -39,7 +39,6 @@ public class RPS {
             System.out.println("Tie!");
         }
     }
-
     public static void main(String[] args) {
         while (true){
             Scanner scanner = new Scanner(System.in);
