@@ -19,9 +19,10 @@ public class timer {
             int time = 0;
             while (true){
                 System.out.println("Enter timer:");
+                String input = sc.nextLine();
+
                 try {
-                    int input = sc.nextInt();
-                    time = input;
+                    time = Integer.parseInt(input);
                     break;
                 } catch (Exception e){
                     System.out.println("Invalid input");
