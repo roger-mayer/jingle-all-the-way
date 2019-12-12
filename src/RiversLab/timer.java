@@ -1,5 +1,4 @@
 package RiversLab;
-import javax.xml.bind.SchemaOutputResolver;
 import java.util.Scanner;
 import java.time.LocalTime;
 import java.time.LocalDate;
@@ -17,6 +16,13 @@ public class timer {
         String tempSec = "" + (time % 60);
         String tempMin = "" + (time / 60);
         return addZero(Integer.parseInt(tempMin), 10) + tempMin + ":" + addZero(Integer.parseInt(tempSec), 10) + tempSec;
+    }
+    public static String exp(String... n){
+        String temp = "Arguments entered: ";
+        for (String i: n) {
+            temp += n + ", ";
+        }
+        return temp;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
