@@ -9,7 +9,7 @@ public class SubstringRoger {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a string");
-        String str = in.next();
+        String str = in.nextLine();
         str = str.trim();
         System.out.println("Enter a starting index");
         int start = in.nextInt();
