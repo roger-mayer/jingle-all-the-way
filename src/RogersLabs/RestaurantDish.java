@@ -16,6 +16,7 @@ public class RestaurantDish {
         this.nameOfDish = nameOfDish;
         this.wouldRecommend = wouldRecommend;
     }
+
     public String toString() {
         return "Name: " + getNameOfDish() + "\nCost: $" + getCostInDollars() + "\nWould Recommend: " + getWouldRecommend();
     }

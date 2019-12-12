@@ -1,7 +1,7 @@
 package bookstore;
 import java.util.ArrayList;
 import java.util.List;
-public class BookStore {
+public class BookStoreRun {
     public static void main(String[] args) {
         Author henderson = new Author("Smith", "Henderson", 1);
         Author yoshikawa = new Author("Eiji", "Yoshikawa", 1);
