@@ -1,0 +1,39 @@
+var quotes = [
+    {
+        quote:'Sometimes I’ll start a sentence and I don’t even know where it’s going. I just hope I find it along the way.',
+        character: 'Micheal'
+    },{
+        quote: 'I talk a lot, so I’ve learned to tune myself out.',
+        character: 'Kelly'
+    },{
+        quote: 'Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.',
+        character: 'Michael'
+    },{
+        quote: 'I’m not superstitious, but I am a little stitious.',
+        character: 'Michael'
+    },{
+        quote: 'If I don’t have some cake soon, I might die.',
+        character: 'Stanley'
+    },{
+        quote: 'The worst thing about prison was the dementors.',
+        character: 'Michael'
+    },{
+        quote: 'Bears. Beets. Battlestar Galactica.',
+        character: 'Jim'
+    },{
+        quote: 'Sometimes the clothes at Gap Kids are too flashy, so I’m forced to go to the American Girl store and order clothes for large colonial dolls.',
+        character: 'Angela'
+    },{
+        quote: 'Eww. I hate hospitals. In my mind they are associated with sickness. Oh... She looks like an angel.',
+        character: 'Michael'
+    },{
+        quote: 'So me think: why waste time, say lot word when few word do trick?',
+        character: 'Kevin'
+    },{
+        quote: 'My heart belongs to music. But my ass belongs to these people.',
+        character: 'Andy'
+    },{
+        quote: 'Who says exactly what they’re thinking? What kind of a game is that?',
+        character: 'Kelly'
+    }
+];
