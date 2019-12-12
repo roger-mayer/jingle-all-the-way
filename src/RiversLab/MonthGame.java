@@ -1,7 +1,6 @@
 package RiversLab;
 import java.util.HashMap;
 import java.util.Scanner;
-
 public class MonthGame {
     public static HashMap<String, String> months = new HashMap<String, String>();
     public static String[] allMonths = new String[12];

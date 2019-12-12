@@ -6,7 +6,6 @@ public class RPS {
     public static byte scoreCPU = 0;
     public static choice playerChoice;
     public static choice CPU;
-
     public static void play(){
         if (playerChoice.obj != CPU.obj) {
             switch (playerChoice.obj) {
@@ -51,14 +50,18 @@ public class RPS {
                     System.out.println("Enter a number between 1-3");
                 }
             } while (true);
-
             CPU = new choice((byte)0);
-
             System.out.println("You chose " + playerChoice.display + " the computer chose " + CPU.display);
-
             play();
-
             System.out.println("" + scorePlayer + " - " + scoreCPU);
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Play again? (y or n)");
+            String in = sc.nextLine();
+            if (in.equalsIgnoreCase("y") || in.equalsIgnoreCase("ye") || in.equalsIgnoreCase("yes")){
+                continue;
+            } else {
+                break;
+            }
         }
     }
 }
