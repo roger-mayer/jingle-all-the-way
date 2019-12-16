@@ -1,5 +1,10 @@
 package RiversLab;
 //import javax.xml.bind.SchemaOutputResolver;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Scanner;
 import java.time.LocalTime;
 import java.time.LocalDate;
@@ -18,6 +23,19 @@ public class timer {
         String tempMin = "" + (time / 60);
         return addZero(Integer.parseInt(tempMin), 10) + tempMin + ":" + addZero(Integer.parseInt(tempSec), 10) + tempSec;
     }
+
+    public static Path events = Paths.get("events.txt");
+
+    public static void checkForEvents() {
+        if (!Files.exists(events)) {
+            try {
+                Files.createFile(events);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean go = true;
@@ -74,6 +92,9 @@ public class timer {
                     System.out.println("                     WIP(not working)                     ");
                     System.out.println("==========================================================");
                     boolean calGo = true;
+
+                    checkForEvents();
+
                     while (calGo){
                         System.out.println("Calender:\n" +
                                 "0: Back to main menu\n" +
