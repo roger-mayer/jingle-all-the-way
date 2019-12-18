@@ -1,5 +1,3 @@
-package RogersLabs;
-
 //Given a string and two indices
 //print a substring consisting of all characters in the inclusive range from
 //You'll find the String class' substring method helpful in completing this challenge.

@@ -1,5 +1,3 @@
-package RogersLabs;
-
 import java.awt.font.TextAttribute;
 
 public class RestaurantTestAdd {
