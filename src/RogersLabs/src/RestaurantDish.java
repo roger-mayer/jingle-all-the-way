@@ -1,5 +1,3 @@
-package RogersLabs;
-
 public class RestaurantDish {
 
     protected double costInDollars;
