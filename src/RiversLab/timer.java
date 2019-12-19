@@ -7,24 +7,19 @@ import java.nio.file.StandardOpenOption;
 import java.util.*;
 import java.time.LocalTime;
 import java.time.LocalDate;
-
 public class timer {
-    //For the actual timer
     public static String addZero(Integer n, Integer test){
         if (n < test){
             return "0";
         }
         return "";
     }
-    //For the actual timer
     public static String showTime(Integer time){
         String tempSec = "" + (time % 60);
         String tempMin = "" + (time / 60);
         return addZero(Integer.parseInt(tempMin), 10) + tempMin + ":" + addZero(Integer.parseInt(tempSec), 10) + tempSec;
     }
-
     public static Path events = Paths.get("events.txt");
-
     public static void checkForEvents() {
         if (!Files.exists(events)) {
             System.out.println("File does not exist!");
@@ -36,7 +31,6 @@ public class timer {
             }
         }
     }
-
     public static String formatToEvent(String n){
         String first = n.substring(0,n.indexOf("|"));
         String last = n.substring(n.indexOf("|") + 1);
@@ -45,7 +39,6 @@ public class timer {
     public static String formatToString(Event n){
         return (n.eventDate+"|"+n.eventName);
     }
-
     public static void updateEvents(List<String> n) {
         try {
             Files.writeString(events, "");
@@ -123,7 +116,7 @@ public class timer {
                     while (calGo){
                         System.out.println("Calender:\n" +
                                 "0: Back to main menu\n" +
-                                "1: See next 30 days\n" +
+                                "1: See events this month\n" +
                                 "2: See all events\n" +
                                 "3: Edit events calender\n");
                         System.out.println("Enter an option:");
@@ -134,9 +127,11 @@ public class timer {
                                 break;
                             }
                             case "1":{
-//                                System.out.println("==========================================================");
-//                                System.out.println("                     WIP(not working)                     ");
-//                                System.out.println("==========================================================");
+                                for (int i = 0; i < allEvents.size(); i++) {
+                                    if (allEvents.get(i).substring(0,2).equals(LocalDate.now().toString().substring(5,7))) {
+                                        System.out.println(formatToEvent(allEvents.get(i)));
+                                    }
+                                }
                                 break;
                             }
                             case "2":{
@@ -154,7 +149,7 @@ public class timer {
                                         "0: Back\n" +
                                         "00: Delete an item\n" +
                                         "000: Add a new event\n" +
-                                        "Or select an existing event to change details:\n");
+                                        "Or select an existing event to change details:");
                                 for (int i = 0; i < allEvents.size(); i++) {
                                     System.out.println(" "+(i + 1)+": "+formatToEvent(allEvents.get(i)));
                                 }
